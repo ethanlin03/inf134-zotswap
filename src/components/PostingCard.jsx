@@ -4,8 +4,8 @@ import { FiHeart, FiMail } from "react-icons/fi";
 
 const PostingCard = () => {
     return (
-        <div className="flex flex-col bg-gray-100 border border-gray-400 rounded-xl p-8 w-1/6">
-            <div className="w-full h-72 overflow-hidden rounded-xl mb-4">
+        <div className="flex flex-col bg-gray-100 border border-gray-400 rounded-xl p-8 w-full shadow-lg">
+            <div className="w-full h-80 overflow-hidden rounded-xl mb-4">
                 <img
                     src={jacket}
                     alt="jacket"

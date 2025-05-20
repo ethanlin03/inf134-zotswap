@@ -9,7 +9,7 @@ const SearchBar = () => {
                 placeholder="Search for an item..."
                 className="outline-none w-full bg-transparent text-gray-700 placeholder-gray-400"
             />
-            <IoSearch className="text-[#0064A4] text-xl" />
+            <IoSearch className="text-[#0064A4] text-xl cursor-pointer"/>
         </div>
     );
 };

@@ -1,10 +1,11 @@
 import React from "react";
 import jacket from "../assets/jacket.png";
-import { FiHeart, FiMail } from "react-icons/fi";
+import { FiHeart } from "react-icons/fi";
+import GradientIcon from "./GradientIcon";
 
 const PostingCard = () => {
     return (
-        <div className="flex flex-col bg-gray-100 border border-gray-400 rounded-xl p-8 w-full shadow-lg">
+        <div className="flex flex-col bg-gray-100 border border-gray-400 rounded-xl p-8 w-full shadow-lg cursor-pointer transition-all duration-200 hover:ring-2 hover:ring-[#0064A4] active:ring-4 active:ring-yellow-400">
             <div className="w-full h-80 overflow-hidden rounded-xl mb-4">
                 <img
                     src={jacket}
@@ -22,15 +23,7 @@ const PostingCard = () => {
                         $10.50
                     </span>
                 </div>
-                <svg style={{ height: 0, width: 0 }}>
-                    <defs>
-                    <linearGradient id="myGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor="#0064A4" />
-                        <stop offset="100%" stopColor="#facc15" />
-                    </linearGradient>
-                    </defs>
-                </svg>
-                <FiHeart size={24} style={{ stroke: "url(#myGradient)" }}/>
+                <GradientIcon icon={<FiHeart/>} className="cursor-pointer hover:scale-90 active:scale-110"/>
 
             </div>
         </div>

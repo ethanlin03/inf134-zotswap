@@ -1,7 +1,7 @@
 import React from "react";
 import Profile from "../assets/profile_image.png";
 import { FiHeart, FiMail } from "react-icons/fi";
-
+import GradientIcon from "./GradientIcon";
 
 const ProfileIcon = () => {
     return (
@@ -14,15 +14,15 @@ const ProfileIcon = () => {
                 </linearGradient>
                 </defs>
             </svg>
-            <FiHeart size={24} style={{ stroke: "url(#myGradient)" }} className="mr-8"/>
-            <FiMail size={24} style={{ stroke: "url(#myGradient)" }} className="mr-8"/>
+            <GradientIcon icon={<FiHeart/>} className="mr-8 cursor-pointer hover:scale-90 active:scale-110"/>
+            <GradientIcon icon={<FiMail/>} className="mr-8 cursor-pointer hover:scale-90 active:scale-110"/>
             <div className="flex flex-row items-center">
                 <img src={Profile} alt="Profile icon" className="mr-4"/>
                 <div className="flex flex-col justify-center items-start">
                     <span className="font-bold text-md text-[#0064A4]">
                         Peter the Anteater
                     </span>
-                    <span className="text-sm text-[#0064A4] underline">
+                    <span className="text-sm text-[#0064A4] underline cursor-pointer">
                         View profile
                     </span>
                 </div>

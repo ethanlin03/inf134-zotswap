@@ -7,7 +7,7 @@ export default function LoginForm() {
           University of California, Irvine
         </h1>
       </header>
-      <form className="flex flex-col items-center bg-white shadow-[0_0_20px_rgba(0,0,0,0.3)] w-full w-xs px-8 pb-6 rounded-md lg:w-xl">
+      <form className="flex flex-col items-center bg-white shadow-[0_0_20px_rgba(0,0,0,0.3)] w-xs px-8 pb-6 rounded-md lg:max-w-lg lg:w-full">
         <h1 className="text-bold text-xl mb-6 pt-6 lg:text-3xl">
           Login with your UCInetID
         </h1>

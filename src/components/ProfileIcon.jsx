@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { FiHeart } from "react-icons/fi";
 import { FaHeart } from "react-icons/fa";
 import { IoMailOutline, IoMailSharp } from "react-icons/io5";
+import GradientIcon from "./GradientIcon";
 
 const ProfileIcon = () => {
   const location = useLocation();
@@ -22,46 +23,24 @@ const ProfileIcon = () => {
         </defs>
       </svg>
 
-      <button onClick={() => navigate("/likes")}>
-        {isOnLikedPage ? (
-          <FaHeart
-            size={24}
-            style={{ fill: "url(#myGradient)", stroke: "url(#myGradient)" }}
-            className="mr-8"
-          />
-        ) : (
-          <FiHeart
-            size={24}
-            style={{ stroke: "url(#myGradient)" }}
-            className="mr-8"
-          />
-        )}
+      {/* Likes Icon */}
+      <button onClick={() => navigate("/likes")} className="mr-8 cursor-pointer hover:scale-90 active:scale-110">
+        <GradientIcon icon={isOnLikedPage ? <FaHeart size={24} /> : <FiHeart size={24} />} />
       </button>
 
-      {/* Mail Icon */}
-      <button onClick={() => navigate("/inbox")}>
-        {isOnInboxPage ? (
-          <IoMailSharp
-            size={24}
-            style={{ fill: "url(#myGradient)", stroke: "url(#myGradient)" }}
-            className="mr-8"
-          />
-        ) : (
-          <IoMailOutline
-            size={24}
-            style={{ stroke: "url(#myGradient)" }}
-            className="mr-8"
-          />
-        )}
+      {/* Inbox Icon */}
+      <button onClick={() => navigate("/inbox")} className="mr-8 cursor-pointer hover:scale-90 active:scale-110">
+        <GradientIcon icon={isOnInboxPage ? <IoMailSharp size={24} /> : <IoMailOutline size={24} />} />
       </button>
 
+      {/* Profile Info */}
       <div className="flex flex-row items-center">
         <img src={Profile} alt="Profile icon" className="mr-4" />
         <div className="flex flex-col justify-center items-start">
           <span className="font-bold text-md text-[#0064A4]">
             Peter the Anteater
           </span>
-          <span className="text-sm text-[#0064A4] underline hover:cursor-pointer">
+          <span className="text-sm text-[#0064A4] underline cursor-pointer">
             View profile
           </span>
         </div>

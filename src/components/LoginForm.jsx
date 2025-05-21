@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export default function LoginForm() {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col justify-center items-center min-h-screen">
       <header className="text-[#0064A4] flex gap-4 items-center justify-center mb-8">
@@ -7,7 +10,13 @@ export default function LoginForm() {
           University of California, Irvine
         </h1>
       </header>
-      <form className="flex flex-col items-center bg-white shadow-[0_0_20px_rgba(0,0,0,0.3)] w-xs px-8 pb-6 rounded-md lg:max-w-lg lg:w-full">
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          navigate("/");
+        }}
+        className="flex flex-col items-center bg-white shadow-[0_0_20px_rgba(0,0,0,0.3)] w-xs px-8 pb-6 rounded-md lg:max-w-lg lg:w-full"
+      >
         <h1 className="text-bold text-xl mb-6 pt-6 lg:text-3xl">
           Login with your UCInetID
         </h1>

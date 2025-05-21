@@ -4,8 +4,10 @@ import Profile from "../assets/profile_image.png";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { GoDotFill } from "react-icons/go";
+import { useNavigate } from "react-router-dom";
 
 export default function ItemHero() {
+  const navigate = useNavigate();
   const name = "Wilson's Training Jacket";
   const condition = "Large • Like new condition";
   const price = "$10.50";
@@ -31,7 +33,10 @@ export default function ItemHero() {
         <h1 className="text-4xl font-semibold">{name}</h1>
         <h2 className="text-xl font-light">{condition}</h2>
         <h3 className="my-4 text-3xl font-semibold">{price}</h3>
-        <button className="bg-gradient-to-r from-[#0064A4] to-[#DBB504] w-full h-12 rounded-md mb-4">
+        <button
+          onClick={() => navigate("/checkout")}
+          className="bg-gradient-to-r from-[#0064A4] to-[#DBB504] text-white font-bold w-full h-12 rounded-md mb-4"
+        >
           Buy Item
         </button>
         <h4 className="mb-2">Posted By</h4>

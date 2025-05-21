@@ -8,7 +8,7 @@ import Filters from "../components/Filters";
 
 const Home = () => {
   return (
-    <div className="flex flex-col justify-center min-h-screen">
+    <div className="flex flex-col justify-center min-h-screen mb-20">
       <div className="flex justify-between items-center w-full mb-20 px-10 py-6">
         <PostButton />
         <ProfileSection />

@@ -38,7 +38,10 @@ const PostingCard = ({ isLiked = false }) => {
                 }}
                 className="cursor-pointer hover:scale-90 active:scale-110"
               >
-                <GradientIcon icon={liked ? <FaHeart size={24} /> : <FiHeart size={24} />} />
+                <GradientIcon
+                    icon={liked ? <FaHeart /> : <FiHeart />}
+                    filled={liked}
+                />
               </div>
           </div>
      </div>

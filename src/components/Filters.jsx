@@ -7,7 +7,6 @@ import FilterIcon from "./FilterIcon";
 
 const Filters = () => {
     const [filter, setFilter] = useState("Trending");
-
     const filters = [
         { label: "Trending", icon: <IoIosTrendingUp/> },
         { label: "Furniture", icon: <AiOutlineHome/> },

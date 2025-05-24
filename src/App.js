@@ -8,10 +8,11 @@ import ScrollToTop from "./components/ScrollToTop";
 import Likes from "./pages/Likes";
 import Inbox from "./pages/Inbox";
 import Chat from "./pages/Chat";
+import Post from "./pages/Post"
 
 function App() {
   const location = useLocation();
-  const showMainNavbar = ["/item/id", "/checkout", "/likes", "/inbox"].includes(
+  const showMainNavbar = ["/item/id", "/checkout", "/likes", "/inbox", "/post"].includes(
     location.pathname
   );
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/likes" element={<Likes />} />
         <Route path="/inbox" element={<Inbox />} />
         <Route path="/inbox/1" element={<Chat />} />
+        <Route path="/post" element={<Post/>} />
       </Routes>
     </>
   );
